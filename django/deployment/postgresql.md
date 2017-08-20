@@ -11,8 +11,10 @@ $ sudo -u postgres psql
 ```
 
 Create database
+
+specify collation to c for correct ordering
 ```
-postgres=# CREATE DATABASE myproject;
+postgres=# CREATE DATABASE myproject TEMPLATE template0 LC_COLLATE 'C';
 ```
 
 Create user
